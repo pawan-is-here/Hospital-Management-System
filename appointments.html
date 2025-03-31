@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Appointments</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">MediCare</h1>
+                <p class="subtitle">Hospital Management</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fas fa-chart-pie"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="patients.html">
+                            <i class="fas fa-users"></i>
+                            Patients
+                        </a>
+                    </li>
+                    <li>
+                        <a href="doctors.html">
+                            <i class="fas fa-user-md"></i>
+                            Doctors & Staff
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="appointments.html">
+                            <i class="fas fa-calendar-alt"></i>
+                            Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+                <ul class="logout">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2 class="page-title">Appointments</h2>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search appointments...">
+                    </div>
+                    <div class="user-avatar">
+                        <span>AD</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Appointments Content -->
+            <main class="content">
+                <div class="action-bar">
+                    <div class="filters">
+                        <button class="filter-btn">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                        <select class="filter-select">
+                            <option>All Departments</option>
+                            <option>Cardiology</option>
+                            <option>Neurology</option>
+                            <option>Orthopedics</option>
+                            <option>Pediatrics</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Status</option>
+                            <option>Scheduled</option>
+                            <option>Completed</option>
+                            <option>Cancelled</option>
+                        </select>
+                    </div>
+                    <button class="add-btn">
+                        <i class="fas fa-plus"></i>
+                        New Appointment
+                    </button>
+                </div>
+
+                <!-- Calendar Header -->
+                <div class="calendar-header">
+                    <div class="calendar-nav">
+                        <button class="calendar-nav-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h3 class="calendar-title">March 2023</h3>
+                        <button class="calendar-nav-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="calendar-view-options">
+                        <button class="btn-primary small">Today</button>
+                        <button class="btn-secondary small">Day</button>
+                        <button class="btn-secondary small">Week</button>
+                        <button class="btn-secondary small">Month</button>
+                    </div>
+                </div>
+
+                <!-- Calendar Grid -->
+                <div class="calendar">
+                    <!-- Days of Week -->
+                    <div class="calendar-days-header">
+                        <div class="calendar-day-name">Sun</div>
+                        <div class="calendar-day-name">Mon</div>
+                        <div class="calendar-day-name">Tue</div>
+                        <div class="calendar-day-name">Wed</div>
+                        <div class="calendar-day-name">Thu</div>
+                        <div class="calendar-day-name">Fri</div>
+                        <div class="calendar-day-name">Sat</div>
+                    </div>
+
+                    <!-- Calendar Days -->
+                    <div class="calendar-grid">
+                        <!-- Week 1 -->
+                        <div class="calendar-day prev-month">26</div>
+                        <div class="calendar-day prev-month">27</div>
+                        <div class="calendar-day prev-month">28</div>
+                        <div class="calendar-day">
+                            <div class="day-number">1</div>
+                            <div class="calendar-event blue">
+                                9:00 AM - Dr. Wilson
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">2</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">3</div>
+                            <div class="calendar-event green">
+                                2:30 PM - Dr. Parker
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">4</div>
+                        </div>
+
+                        <!-- Week 2 -->
+                        <div class="calendar-day">
+                            <div class="day-number">5</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">6</div>
+                            <div class="calendar-event purple">
+                                11:00 AM - Dr. Miller
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">7</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">8</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">9</div>
+                            <div class="calendar-event yellow">
+                                3:15 PM - Dr. Thompson
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">10</div>
+                            <div class="calendar-event blue">
+                                10:00 AM - Dr. Wilson
+                            </div>
+                            <div class="calendar-event green">
+                                1:45 PM - Dr. Chen
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">11</div>
+                        </div>
+
+                        <!-- Week 3 -->
+                        <div class="calendar-day">
+                            <div class="day-number">12</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">13</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">14</div>
+                            <div class="calendar-event red">
+                                9:30 AM - Dr. Rodriguez
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">15</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">16</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">17</div>
+                            <div class="calendar-event blue">
+                                4:00 PM - Dr. Wilson
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">18</div>
+                        </div>
+
+                        <!-- Week 4 -->
+                        <div class="calendar-day">
+                            <div class="day-number">19</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">20</div>
+                            <div class="calendar-event purple">
+                                2:00 PM - Dr. Miller
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">21</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">22</div>
+                            <div class="calendar-event green">
+                                10:30 AM - Dr. Parker
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">23</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">24</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">25</div>
+                            <div class="calendar-event yellow">
+                                1:00 PM - Dr. Thompson
+                            </div>
+                        </div>
+
+                        <!-- Week 5 -->
+                        <div class="calendar-day">
+                            <div class="day-number">26</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">27</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">28</div>
+                            <div class="calendar-event blue">
+                                11:15 AM - Dr. Wilson
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">29</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">30</div>
+                            <div class="calendar-event red">
+                                3:45 PM - Dr. Rodriguez
+                            </div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">31</div>
+                        </div>
+                        <div class="calendar-day next-month">1</div>
+                    </div>
+                </div>
+
+                <!-- Today's Appointments -->
+                <div class="section-header">
+                    <h3>Today's Appointments</h3>
+                </div>
+                <div class="card full-width">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Patient</th>
+                                <th>Doctor</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10:00 AM</td>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="avatar"></div>
+                                        <div>
+                                            <div class="name">John Smith</div>
+                                            <div class="patient-id">P-1001</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="name">Dr. Robert Wilson</div>
+                                    <div class="department">Cardiology</div>
+                                </td>
+                                <td>Cardiology</td>
+                                <td><span class="status-badge green">Confirmed</span></td>
+                                <td>
+                                    <a href="#" class="action-link">Edit</a>
+                                    <a href="#" class="action-link danger">Cancel</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11:30 AM</td>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="avatar"></div>
+                                        <div>
+                                            <div class="name">Sarah Johnson</div>
+                                            <div class="patient-id">P-1002</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="name">Dr. Emily Parker</div>
+                                    <div class="department">Neurology</div>
+                                </td>
+                                <td>Neurology</td>
+                                <td><span class="status-badge yellow">Pending</span></td>
+                                <td>
+                                    <a href="#" class="action-link">Edit</a>
+                                    <a href="#" class="action-link danger">Cancel</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2:15 PM</td>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="avatar"></div>
+                                        <div>
+                                            <div class="name">Michael Brown</div>
+                                            <div class="patient-id">P-1003</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="name">Dr. James Miller</div>
+                                    <div class="department">Orthopedics</div>
+                                </td>
+                                <td>Orthopedics</td>
+                                <td><span class="status-badge green">Confirmed</span></td>
+                                <td>
+                                    <a href="#" class="action-link">Edit</a>
+                                    <a href="#" class="action-link danger">Cancel</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

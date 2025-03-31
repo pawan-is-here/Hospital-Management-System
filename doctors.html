@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Doctors & Staff</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">MediCare</h1>
+                <p class="subtitle">Hospital Management</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fas fa-chart-pie"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="patients.html">
+                            <i class="fas fa-users"></i>
+                            Patients
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="doctors.html">
+                            <i class="fas fa-user-md"></i>
+                            Doctors & Staff
+                        </a>
+                    </li>
+                    <li>
+                        <a href="appointments.html">
+                            <i class="fas fa-calendar-alt"></i>
+                            Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+                <ul class="logout">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2 class="page-title">Doctors & Staff</h2>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search doctors...">
+                    </div>
+                    <div class="user-avatar">
+                        <span>AD</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Doctors Content -->
+            <main class="content">
+                <div class="action-bar">
+                    <div class="filters">
+                        <button class="filter-btn">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                        <select class="filter-select">
+                            <option>All Departments</option>
+                            <option>Cardiology</option>
+                            <option>Neurology</option>
+                            <option>Orthopedics</option>
+                            <option>Pediatrics</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Status</option>
+                            <option>Available</option>
+                            <option>On Leave</option>
+                            <option>Busy</option>
+                        </select>
+                    </div>
+                    <button class="add-btn">
+                        <i class="fas fa-plus"></i>
+                        Add New Doctor
+                    </button>
+                </div>
+
+                <div class="doctors-grid">
+                    <!-- Doctor Card 1 -->
+                    <div class="doctor-card">
+                        <div class="doctor-info">
+                            <div class="avatar large"></div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Dr. Robert Wilson</h3>
+                                <p class="doctor-specialty">Cardiology Specialist</p>
+                            </div>
+                        </div>
+                        <div class="doctor-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                r.wilson@example.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                (555) 123-4567
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-calendar"></i>
+                                Joined: Jan 2020
+                            </div>
+                        </div>
+                        <div class="doctor-footer">
+                            <span class="status-badge green">Available</span>
+                            <div class="doctor-actions">
+                                <button class="btn-secondary">Profile</button>
+                                <button class="btn-primary">Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 2 -->
+                    <div class="doctor-card">
+                        <div class="doctor-info">
+                            <div class="avatar large"></div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Dr. Emily Parker</h3>
+                                <p class="doctor-specialty">Neurology Specialist</p>
+                            </div>
+                        </div>
+                        <div class="doctor-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                e.parker@example.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                (555) 987-6543
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-calendar"></i>
+                                Joined: Mar 2019
+                            </div>
+                        </div>
+                        <div class="doctor-footer">
+                            <span class="status-badge yellow">Busy</span>
+                            <div class="doctor-actions">
+                                <button class="btn-secondary">Profile</button>
+                                <button class="btn-primary">Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 3 -->
+                    <div class="doctor-card">
+                        <div class="doctor-info">
+                            <div class="avatar large"></div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Dr. James Miller</h3>
+                                <p class="doctor-specialty">Orthopedics Specialist</p>
+                            </div>
+                        </div>
+                        <div class="doctor-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                j.miller@example.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                (555) 456-7890
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-calendar"></i>
+                                Joined: Jun 2021
+                            </div>
+                        </div>
+                        <div class="doctor-footer">
+                            <span class="status-badge red">On Leave</span>
+                            <div class="doctor-actions">
+                                <button class="btn-secondary">Profile</button>
+                                <button class="btn-primary">Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 4 -->
+                    <div class="doctor-card">
+                        <div class="doctor-info">
+                            <div class="avatar large"></div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Dr. Sarah Thompson</h3>
+                                <p class="doctor-specialty">Pediatrics Specialist</p>
+                            </div>
+                        </div>
+                        <div class="doctor-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                s.thompson@example.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                (555) 234-5678
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-calendar"></i>
+                                Joined: Nov 2020
+                            </div>
+                        </div>
+                        <div class="doctor-footer">
+                            <span class="status-badge green">Available</span>
+                            <div class="doctor-actions">
+                                <button class="btn-secondary">Profile</button>
+                                <button class="btn-primary">Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 5 -->
+                    <div class="doctor-card">
+                        <div class="doctor-info">
+                            <div class="avatar large"></div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Dr. Michael Chen</h3>
+                                <p class="doctor-specialty">Dermatology Specialist</p>
+                            </div>
+                        </div>
+                        <div class="doctor-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                m.chen@example.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                (555) 876-5432
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-calendar"></i>
+                                Joined: Feb 2022
+                            </div>
+                        </div>
+                        <div class="doctor-footer">
+                            <span class="status-badge green">Available</span>
+                            <div class="doctor-actions">
+                                <button class="btn-secondary">Profile</button>
+                                <button class="btn-primary">Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Card 6 -->
+                    <div class="doctor-card">
+                        <div class="doctor-info">
+                            <div class="avatar large"></div>
+                            <div class="doctor-details">
+                                <h3 class="doctor-name">Dr. Lisa Rodriguez</h3>
+                                <p class="doctor-specialty">Psychiatry Specialist</p>
+                            </div>
+                        </div>
+                        <div class="doctor-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                l.rodriguez@example.com
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                (555) 345-6789
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-calendar"></i>
+                                Joined: Apr 2021
+                            </div>
+                        </div>
+                        <div class="doctor-footer">
+                            <span class="status-badge yellow">Busy</span>
+                            <div class="doctor-actions">
+                                <button class="btn-secondary">Profile</button>
+                                <button class="btn-primary">Schedule</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination center">
+                    <div class="pagination-controls">
+                        <a href="#" class="pagination-btn prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </a>
+                        <a href="#" class="pagination-btn active">1</a>
+                        <a href="#" class="pagination-btn">2</a>
+                        <a href="#" class="pagination-btn">3</a>
+                        <a href="#" class="pagination-btn next">
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">MediCare</h1>
+                <p class="subtitle">Hospital Management</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="fas fa-chart-pie"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="patients.html">
+                            <i class="fas fa-users"></i>
+                            Patients
+                        </a>
+                    </li>
+                    <li>
+                        <a href="doctors.html">
+                            <i class="fas fa-user-md"></i>
+                            Doctors & Staff
+                        </a>
+                    </li>
+                    <li>
+                        <a href="appointments.html">
+                            <i class="fas fa-calendar-alt"></i>
+                            Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+                <ul class="logout">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2 class="page-title">Dashboard</h2>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="user-avatar">
+                        <span>AD</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <main class="content">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon blue">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <p class="stat-label">Total Patients</p>
+                            <h3 class="stat-value">1,284</h3>
+                            <p class="stat-change positive">+5.2% from last month</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon green">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-details">
+                            <p class="stat-label">Appointments</p>
+                            <h3 class="stat-value">42</h3>
+                            <p class="stat-change positive">+2.4% from yesterday</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon purple">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="stat-details">
+                            <p class="stat-label">Doctors</p>
+                            <h3 class="stat-value">64</h3>
+                            <p class="stat-change positive">+1 new this week</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-icon red">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <div class="stat-details">
+                            <p class="stat-label">Critical Patients</p>
+                            <h3 class="stat-value">12</h3>
+                            <p class="stat-change negative">-2 from yesterday</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Patients & Upcoming Appointments -->
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Patients</h3>
+                        </div>
+                        <div class="card-body">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>ID</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="patient-info">
+                                                <div class="avatar"></div>
+                                                <div>
+                                                    <div class="name">John Smith</div>
+                                                    <div class="age">42 years</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>P-1001</td>
+                                        <td><span class="status-badge green">Recovered</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="patient-info">
+                                                <div class="avatar"></div>
+                                                <div>
+                                                    <div class="name">Sarah Johnson</div>
+                                                    <div class="age">28 years</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>P-1002</td>
+                                        <td><span class="status-badge yellow">In Treatment</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="patient-info">
+                                                <div class="avatar"></div>
+                                                <div>
+                                                    <div class="name">Michael Brown</div>
+                                                    <div class="age">56 years</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>P-1003</td>
+                                        <td><span class="status-badge red">Critical</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="view-all">
+                                <a href="patients.html">View all patients</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Upcoming Appointments</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="appointment-list">
+                                <div class="appointment-item">
+                                    <div class="appointment-date">
+                                        <div class="date-box">10</div>
+                                    </div>
+                                    <div class="appointment-details">
+                                        <p class="doctor-name">Dr. Robert Wilson</p>
+                                        <p class="appointment-info">Cardiology • 10:00 AM</p>
+                                    </div>
+                                    <div class="appointment-status">
+                                        <span class="day-badge">Today</span>
+                                    </div>
+                                </div>
+
+                                <div class="appointment-item">
+                                    <div class="appointment-date">
+                                        <div class="date-box">10</div>
+                                    </div>
+                                    <div class="appointment-details">
+                                        <p class="doctor-name">Dr. Emily Parker</p>
+                                        <p class="appointment-info">Neurology • 11:30 AM</p>
+                                    </div>
+                                    <div class="appointment-status">
+                                        <span class="day-badge">Today</span>
+                                    </div>
+                                </div>
+
+                                <div class="appointment-item">
+                                    <div class="appointment-date">
+                                        <div class="date-box purple">11</div>
+                                    </div>
+                                    <div class="appointment-details">
+                                        <p class="doctor-name">Dr. James Miller</p>
+                                        <p class="appointment-info">Orthopedics • 09:15 AM</p>
+                                    </div>
+                                    <div class="appointment-status">
+                                        <span class="day-badge purple">Tomorrow</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="view-all">
+                                <a href="appointments.html">View all appointments</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

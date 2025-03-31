@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System - Patients</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">MediCare</h1>
+                <p class="subtitle">Hospital Management</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <i class="fas fa-chart-pie"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="patients.html">
+                            <i class="fas fa-users"></i>
+                            Patients
+                        </a>
+                    </li>
+                    <li>
+                        <a href="doctors.html">
+                            <i class="fas fa-user-md"></i>
+                            Doctors & Staff
+                        </a>
+                    </li>
+                    <li>
+                        <a href="appointments.html">
+                            <i class="fas fa-calendar-alt"></i>
+                            Appointments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+                <ul class="logout">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h2 class="page-title">Patients</h2>
+                <div class="header-right">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search patients...">
+                    </div>
+                    <div class="user-avatar">
+                        <span>AD</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Patients Content -->
+            <main class="content">
+                <div class="action-bar">
+                    <div class="filters">
+                        <button class="filter-btn">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                        <select class="filter-select">
+                            <option>All Departments</option>
+                            <option>Cardiology</option>
+                            <option>Neurology</option>
+                            <option>Orthopedics</option>
+                            <option>Pediatrics</option>
+                        </select>
+                        <select class="filter-select">
+                            <option>All Status</option>
+                            <option>Active</option>
+                            <option>Recovered</option>
+                            <option>Critical</option>
+                        </select>
+                    </div>
+                    <button class="add-btn">
+                        <i class="fas fa-plus"></i>
+                        Add New Patient
+                    </button>
+                </div>
+
+                <div class="card full-width">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>ID</th>
+                                <th>Age/Gender</th>
+                                <th>Phone</th>
+                                <th>Department</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="avatar"></div>
+                                        <div>
+                                            <div class="name">John Smith</div>
+                                            <div class="email">john.smith@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>P-1001</td>
+                                <td>42 / Male</td>
+                                <td>(555) 123-4567</td>
+                                <td>Cardiology</td>
+                                <td><span class="status-badge green">Recovered</span></td>
+                                <td><a href="#" class="action-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="avatar"></div>
+                                        <div>
+                                            <div class="name">Sarah Johnson</div>
+                                            <div class="email">sarah.j@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>P-1002</td>
+                                <td>28 / Female</td>
+                                <td>(555) 987-6543</td>
+                                <td>Neurology</td>
+                                <td><span class="status-badge yellow">In Treatment</span></td>
+                                <td><a href="#" class="action-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="avatar"></div>
+                                        <div>
+                                            <div class="name">Michael Brown</div>
+                                            <div class="email">m.brown@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>P-1003</td>
+                                <td>56 / Male</td>
+                                <td>(555) 456-7890</td>
+                                <td>Cardiology</td>
+                                <td><span class="status-badge red">Critical</span></td>
+                                <td><a href="#" class="action-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="avatar"></div>
+                                        <div>
+                                            <div class="name">Emily Davis</div>
+                                            <div class="email">emily.d@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>P-1004</td>
+                                <td>34 / Female</td>
+                                <td>(555) 234-5678</td>
+                                <td>Orthopedics</td>
+                                <td><span class="status-badge green">Recovered</span></td>
+                                <td><a href="#" class="action-link">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="patient-info">
+                                        <div class="avatar"></div>
+                                        <div>
+                                            <div class="name">Robert Wilson</div>
+                                            <div class="email">r.wilson@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>P-1005</td>
+                                <td>62 / Male</td>
+                                <td>(555) 789-0123</td>
+                                <td>Neurology</td>
+                                <td><span class="status-badge yellow">In Treatment</span></td>
+                                <td><a href="#" class="action-link">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination">
+                        <div class="pagination-info">
+                            Showing <span>1</span> to <span>5</span> of <span>42</span> results
+                        </div>
+                        <div class="pagination-controls">
+                            <a href="#" class="pagination-btn prev">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <a href="#" class="pagination-btn active">1</a>
+                            <a href="#" class="pagination-btn">2</a>
+                            <a href="#" class="pagination-btn">3</a>
+                            <span class="pagination-ellipsis">...</span>
+                            <a href="#" class="pagination-btn">8</a>
+                            <a href="#" class="pagination-btn">9</a>
+                            <a href="#" class="pagination-btn next">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
